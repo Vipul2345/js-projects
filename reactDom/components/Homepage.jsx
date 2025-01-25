@@ -37,27 +37,6 @@ const Homepage = () => {
             </p>
           </div>
         </section>
-        <section id="about" className="text-center mt-10">
-          <h2 className="text-2xl font-semibold">About Us</h2>
-          <p className="text-gray-700 mt-4 px-6">
-            LearnHub is dedicated to providing the best learning experience
-            through high-quality courses and expert guidance. Our mission is to
-            make education accessible to everyone.
-          </p>
-        </section>
-        <section id="contact" className="text-center mt-10">
-          <h2 className="text-2xl font-semibold">Contact Us</h2>
-          <p className="text-gray-700 mt-4 px-6">
-            Have questions? Feel free to reach out to us at{" "}
-            <a
-              href="mailto:contact@learnhub.com"
-              className="text-blue-500 hover:underline"
-            >
-              contact@learnhub.com
-            </a>
-            .
-          </p>
-        </section>
       </main>
     </div>
   );

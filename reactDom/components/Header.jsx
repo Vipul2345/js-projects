@@ -1,5 +1,5 @@
-// src/components/Header.js
 import React, { useState } from "react";
+import { Link, NavLink } from "react-router";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,81 +13,52 @@ const Header = () => {
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         {/* Logo or Brand Name */}
         <div className="text-2xl font-bold">
-          <a href="/">YourCompany</a>
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-blue-600" : "text-white-600"
+              }
+            >
+              Home
+            </NavLink>
+          </li>
         </div>
 
         {/* Navigation */}
         <nav>
           <ul className="hidden md:flex space-x-6">
             <li>
-              <a href="/about" className="hover:text-gray-400">
+              <NavLink
+                to="about"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600" : "text-white-600"
+                }
+              >
                 About
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/services" className="hover:text-gray-400">
+              <NavLink
+                to="services"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600" : "text-white-600"
+                }
+              >
                 Services
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/contact" className="hover:text-gray-400">
+              <NavLink
+                to="contact"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600" : "text-white-600"
+                }
+              >
                 Contact
-              </a>
-            </li>
-            <li>
-              <a href="/blog" className="hover:text-gray-400">
-                Blog
-              </a>
+              </NavLink>
             </li>
           </ul>
-
-          {/* Hamburger menu for mobile */}
-          <div className="md:hidden flex items-center" onClick={toggleMenu}>
-            <button className="text-white focus:outline-none">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
-
-          {/* Mobile Menu */}
-          {isMenuOpen && (
-            <div className="md:hidden absolute top-16 left-0 right-0 bg-gray-800 p-6 shadow-lg z-10">
-              <ul className="space-y-4">
-                <li>
-                  <a href="/about" className="text-white">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="/services" className="text-white">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="/contact" className="text-white">
-                    Contact
-                  </a>
-                </li>
-                <li>
-                  <a href="/blog" className="text-white">
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </div>
-          )}
         </nav>
       </div>
     </header>
