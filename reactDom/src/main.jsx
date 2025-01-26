@@ -8,6 +8,7 @@ import {
   About,
   Services,
   Contact,
+  Github,
 } from "../components/index";
 import {
   BrowserRouter,
@@ -48,6 +49,8 @@ const router = createBrowserRouter(
       <Route path="contact/:userID" element={<Contact />}>
         <Route path="mobile" element={<h1>74878489468</h1>} />
       </Route>
+      <Route path="github" element={<Github />} />
+      <Route path="github/:userID" element={<Github />} />
     </Route>
   )
 );

@@ -58,6 +58,16 @@ const Header = () => {
                 Contact
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="github"
+                className={({ isActive }) =>
+                  isActive ? "text-blue-600" : "text-white-600"
+                }
+              >
+                Github
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </div>
