@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router";
-import { Outlet } from "react-router";
+import { Outlet, useParams } from "react-router";
 
 const Contact = () => {
+  let { userID } = useParams();
   return (
     <>
-      <Link to="mobile">Mobile</Link>
+      <Link to="mobile">{userID}Mobile</Link>
       <Outlet />
       <p className="text-BorderColor-800 text-2xl font-semibold mb-4 bg-amber-700">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni minus

@@ -44,7 +44,8 @@ const router = createBrowserRouter(
       <Route path="" element={<Homepage />} />
       <Route path="about" element={<About />} />
       <Route path="services" element={<Services />} />
-      <Route path="contact" element={<Contact />}>
+      <Route path="contact" element={<Contact />} />
+      <Route path="contact/:userID" element={<Contact />}>
         <Route path="mobile" element={<h1>74878489468</h1>} />
       </Route>
     </Route>
