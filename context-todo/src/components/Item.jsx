@@ -2,7 +2,7 @@ import React from "react";
 
 const Item = ({ todo }) => {
   return (
-    <div className="flex items-center justify-between bg-gray-100 p-2 my-2 rounded-md">
+    <div className="flex items-center justify-between bg-gray-100 p-2 my-2 rounded-md text-black">
       <div>
         <input type="checkbox" />
         <span className="ml-2">{todo.todo}</span>
