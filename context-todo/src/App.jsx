@@ -9,6 +9,7 @@ function App() {
     const id = Date.now();
     setTodos((prev) => [{ id: Date.now(), ...todo }, ...prev]);
   };
+
   return (
     <>
       <div className="min-h-screen min-w-screen py-8">
@@ -21,9 +22,7 @@ function App() {
           </div>
 
           <div className="p-4 rounded-md mb-4">
-            <Item
-              todo={{ id: 1, todo: "Todo MessageChannel", completed: false }}
-            />
+            <Item todo={todos} />
           </div>
         </div>
       </div>
