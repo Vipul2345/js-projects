@@ -1,8 +1,14 @@
 import { useState } from "react";
 import "./App.css";
 import { Form, Item } from "./components";
+import { TodoProvider, useTodo, TodoContext } from "./context/Todocontext";
 
 function App() {
+  const [todos, setTodos] = useState([]);
+  const addTodo = (todo) => {
+    const id = Date.now();
+    setTodos((prev) => [{ id: Date.now(), ...todo }, ...prev]);
+  };
   return (
     <>
       <div className="min-h-screen min-w-screen py-8">
@@ -11,7 +17,7 @@ function App() {
             Todo App
           </h1>
           <div className="p-4 rounded-md mb-4">
-            <Form />
+            <Form addTodo={addTodo} />
           </div>
 
           <div className="p-4 rounded-md mb-4">
