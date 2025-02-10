@@ -23,6 +23,7 @@ const Form = () => {
           type="text"
           className="flex-1 p-2 border border-gray-300 rounded-l-md"
           placeholder="Enter your TODO Here"
+          value={todo}
           onChange={(e) => setTodo(e.target.value)}
         />
         <button
