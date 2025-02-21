@@ -3,7 +3,9 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1>A B CDSE dsfg dfgsfd</h1>
+      <h1>
+        Test Project from complete knowledge of react including redux(Blog App)
+      </h1>
     </>
   );
 }
